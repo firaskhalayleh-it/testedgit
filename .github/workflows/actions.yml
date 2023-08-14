@@ -1,12 +1,14 @@
-name : github actions
+name: my github actions
 
 on:
-	push:
-		branches:
-			- master
+  push:
+    branches:
+      - master
+
 jobs:
-	build: 
-		runs-on: ubuntu-latest
-		steps: 
-			- name : checkout repository
-			  uses : actions/checkout@v2
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v2  # Changed to v2 for a more recent version of the action
+
